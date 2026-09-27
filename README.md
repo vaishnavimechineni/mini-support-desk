@@ -1,16 +1,107 @@
-# React + Vite
+# Mini Support Desk
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A full-stack web application for managing internal support tickets.
 
-Currently, two official plugins are available:
+The Mini Support Desk allows users to create, view, search, filter, edit, update, and delete support tickets. The application uses a React frontend, an Express.js backend, and SQLite for persistent ticket storage.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Live Demo
 
-## React Compiler
+Frontend:
+https://mini-support-desk-delta.vercel.app/
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Backend:
+https://mini-support-desk-dycu.onrender.com/
 
-## Expanding the Oxlint configuration
+GitHub:
+https://github.com/vaishnavimechineni/mini-support-desk
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Features
+
+- Create new support tickets
+- View all support tickets
+- Search tickets by title or client
+- Filter tickets by status
+- Filter tickets by priority
+- Edit ticket details
+- Change ticket status
+- Change ticket priority
+- Delete tickets
+- Dashboard with ticket statistics
+- Persistent data storage using SQLite
+- Responsive user interface
+- Live frontend deployment on Vercel
+- Live backend deployment on Render
+
+## Dashboard
+
+The dashboard displays:
+
+- Total Tickets
+- Open Tickets
+- In Progress Tickets
+- Resolved Tickets
+
+## Sample Tickets
+
+The application contains 10 sample support tickets:
+
+| ID | Ticket Title | Client | Priority | Status |
+|---|---|---|---|---|
+| 1 | Password reset | Kiran | High | In Progress |
+| 2 | Account update | Priya | Low | Resolved |
+| 3 | Payment confirmation | Arjun | Medium | Resolved |
+| 4 | Login problem | Rahul | High | Open |
+| 5 | Software installation | Sneha | Medium | Open |
+| 6 | Email not syncing | Ananya | High | Open |
+| 7 | Software access request | Rohit | Medium | In Progress |
+| 8 | Printer not working | Meena | Low | Open |
+| 9 | Network issue | Aditya | High | Resolved |
+| 10 | Account locked | Neha | Medium | Resolved |
+
+## Technology Stack
+
+### Frontend
+
+- React
+- Vite
+- JavaScript
+- HTML
+- CSS
+
+### Backend
+
+- Node.js
+- Express.js
+- CORS
+
+### Database
+
+- SQLite
+- better-sqlite3
+
+### Deployment
+
+- Vercel – Frontend
+- Render – Backend
+
+## Project Structure
+
+```text
+mini-support-desk/
+│
+├── public/
+│
+├── src/
+│   ├── assets/
+│   ├── App.jsx
+│   ├── App.css
+│   ├── index.css
+│   └── main.jsx
+│
+├── server.js
+├── index.html
+├── package.json
+├── package-lock.json
+├── vite.config.js
+├── .gitignore
+└── README.md
