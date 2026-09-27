@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 
-const API_URL = "http://localhost:5000";
+// Render backend
+const API_URL =
+  "https://mini-support-desk-dycu.onrender.com";
 
 function App() {
   const [tickets, setTickets] = useState([]);
@@ -23,13 +25,15 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
-  // Load tickets from backend
+  // Load tickets from Render backend
   const loadTickets = async () => {
     try {
       setLoading(true);
       setError("");
 
-      const response = await fetch(`${API_URL}/tickets`);
+      const response = await fetch(
+        `${API_URL}/tickets`
+      );
 
       if (!response.ok) {
         throw new Error("Failed to load tickets");
@@ -40,7 +44,7 @@ function App() {
     } catch (err) {
       console.error(err);
       setError(
-        "Could not connect to the backend. Make sure server.js is running."
+        "Could not connect to the backend. Please try again."
       );
     } finally {
       setLoading(false);
@@ -516,6 +520,7 @@ function App() {
               <option>
                 High
               </option>
+
             </select>
 
           </div>
