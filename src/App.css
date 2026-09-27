@@ -1,0 +1,306 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  color: #222;
+}
+
+/* Main App */
+.app {
+  min-height: 100vh;
+}
+
+/* Header */
+.header {
+  background: #172554;
+  color: white;
+  text-align: center;
+  padding: 35px 20px;
+}
+
+.header h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.header p {
+  font-size: 18px;
+}
+
+/* Main Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 30px auto;
+}
+
+/* Dashboard */
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px 15px;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+}
+
+.stat-card h2 {
+  font-size: 38px;
+  font-weight: bold;
+  color: #172554;
+  margin-bottom: 8px;
+}
+
+.stat-card p {
+  font-size: 17px;
+  font-weight: 600;
+  color: #555;
+}
+
+/* Panels */
+.panel {
+  background: white;
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.panel h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #172554;
+}
+
+/* Create Ticket Form */
+.create-form {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr auto;
+  gap: 12px;
+}
+
+/* Inputs and Selects */
+input,
+select {
+  padding: 12px;
+  border: 1px solid #bbb;
+  border-radius: 7px;
+  font-size: 15px;
+  background: white;
+  color: #222;
+}
+
+input:focus,
+select:focus {
+  outline: 2px solid #2563eb;
+}
+
+/* Buttons */
+button {
+  border: none;
+  border-radius: 7px;
+  padding: 12px 18px;
+  background: #2563eb;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+/* Search and Filter */
+.filter-form {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 12px;
+}
+
+/* Tickets Section */
+.tickets-section {
+  margin-top: 30px;
+}
+
+.tickets-section > h2 {
+  text-align: center;
+  color: #172554;
+  margin-bottom: 8px;
+}
+
+.ticket-count {
+  text-align: center;
+  color: #555;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* Ticket Grid */
+.tickets-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* Ticket Card */
+.ticket-card {
+  background: white;
+  border-radius: 12px;
+  padding: 22px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+}
+
+.ticket-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.ticket-id {
+  font-weight: bold;
+  color: #555;
+  font-size: 14px;
+}
+
+.ticket-card h3 {
+  font-size: 22px;
+  color: #172554;
+  margin-bottom: 10px;
+}
+
+.ticket-card p {
+  color: #444;
+  margin-bottom: 18px;
+}
+
+/* Created Date */
+.created-date {
+  font-size: 13px;
+  color: #64748b !important;
+  margin-top: -5px;
+}
+
+/* Priority Badge */
+.priority {
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.priority.low {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.priority.medium {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.priority.high {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+/* Ticket Fields */
+.ticket-field {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 12px 0;
+}
+
+.ticket-field label {
+  font-weight: bold;
+  color: #444;
+}
+
+.ticket-field select {
+  width: 160px;
+}
+
+/* Delete Button */
+.delete-button {
+  width: 100%;
+  margin-top: 15px;
+  background: #dc2626;
+}
+
+.delete-button:hover {
+  background: #b91c1c;
+}
+
+/* No Tickets */
+.no-tickets {
+  background: white;
+  padding: 30px;
+  text-align: center;
+  border-radius: 12px;
+  color: #666;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Edit Mode Inputs */
+.ticket-card input {
+  width: 100%;
+  margin-top: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 800px) {
+  .dashboard {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .create-form {
+    grid-template-columns: 1fr;
+  }
+
+  .filter-form {
+    grid-template-columns: 1fr;
+  }
+
+  .tickets-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+
+  .header h1 {
+    font-size: 28px;
+  }
+
+  .header p {
+    font-size: 15px;
+  }
+
+  .container {
+    width: 94%;
+  }
+
+  .panel {
+    padding: 18px;
+  }
+
+  .ticket-card {
+    padding: 18px;
+  }
+}

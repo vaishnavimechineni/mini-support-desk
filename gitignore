@@ -1,0 +1,4 @@
+node_modules/
+supportdesk.db
+dist/
+.env
